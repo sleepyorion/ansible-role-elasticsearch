@@ -1,0 +1,9 @@
+
+- include: "Install_repo_{{ansible_os_family}}.yml"
+
+- name: Config ElasticSearch service 
+  service:
+    name: elasticsearch
+    enabled: yes
+    state: started
+  become: yes
