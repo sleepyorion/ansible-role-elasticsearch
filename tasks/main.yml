@@ -1,5 +1,5 @@
 
-- include: "Install_repo_{{ansible_os_family}}.yml"
+- include: "Install_{{ elasticsearch_install_method | lower }}_{{ansible_os_family}}.yml"
 
 - name: Config ElasticSearch service 
   service:
